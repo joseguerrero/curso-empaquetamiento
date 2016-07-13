@@ -1,0 +1,14 @@
+Source: <nombre-paquete-fuente>
+Section: <seccion-paquete>
+Priority: standard
+Maintainer: <nombre-mantenedor> <<correo-mantenedor>>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: <pagina-del-proyecto>
+
+Package: <nombre-paquete-binario>
+Architecture: <arquitectura-paquete> (all, i386, amd64, etc)
+Depends: <dependencias-paquete> (separadas por comas ",")
+Priority: optional
+Description: <descripcion-corta-paquete>
+ <descripcion-larga-paquete>
