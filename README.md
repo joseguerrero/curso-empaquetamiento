@@ -1,8 +1,8 @@
 # Debianizado
 
-Debianizar consiste en agregar en el directorio raíz de nuestro código fuente, una carpeta 'debian' con los archivos necesarios (configuración, scripts de instalación, etc) tal como se indica en la Política de Debian[1] y en los Manuales para desarrolladores de Debian[2].
+Debianizar consiste en agregar en el directorio raíz de nuestro código fuente, una carpeta 'debian' con los archivos necesarios (configuración, scripts de instalación, etc) tal como se indica en la [Política de Debian][1] y en los [Manuales para desarrolladores de Debian][2].
 
-Existen herramientas para debianizar proyectos de forma semiautomatica como dh_make[3], sin embargo esta herramienta tiene ciertas limitaciones -no genera automáticamente el archivo de control ni verifica las dependencias del paquete- y requiere trabajo adicional; genera mas contenido de lo estrictamente necesario, lo cual puede generar confusión para quien se este iniciando en el proceso de debianización de código fuente. Por esta razón se describe a continuación el contenido mínimo necesario (genérico) que debe tener un paquete fuente debianizado.
+Existen herramientas para debianizar proyectos de forma semiautomatica como [dh_make][3], sin embargo esta herramienta tiene ciertas limitaciones -no genera automáticamente el archivo de control ni verifica las dependencias del paquete- y requiere trabajo adicional; genera mas contenido de lo estrictamente necesario, lo cual puede generar confusión para quien se este iniciando en el proceso de debianización de código fuente. Por esta razón se describe a continuación el contenido mínimo necesario (genérico) que debe tener un paquete fuente debianizado.
 
 ## CHANGELOG
 
@@ -10,7 +10,9 @@ Existen herramientas para debianizar proyectos de forma semiautomatica como dh_m
 
 `debian/changelog`
 
-Descripción: En este archivo se lleva un breve registro explicando las modificaciones y/o mejoras realizadas al código fuente. Se recomienda no generar este archivo a mano, dado que utiliza un formato especial y son frecuentes los errores cuando se genera manualmente. En su lugar se recomienda usar la herramienta dch[4] para generarlo automáticamente. Para mas detalles consulte el apartado 4.4 en https://www.debian.org/doc/debian-policy/ch-source.html y el 4.3 en https://www.debian.org/doc/manuals/maint-guide/dreq.es.html#changelog
+### Descripción
+
+En este archivo se lleva un breve registro explicando las modificaciones y/o mejoras realizadas al código fuente. Se recomienda no generar este archivo a mano, dado que utiliza un formato especial y son frecuentes los errores cuando se genera manualmente. En su lugar se recomienda usar la herramienta [dch][4] para generarlo automáticamente. Para mas detalles consulte el apartado 4.4 en https://www.debian.org/doc/debian-policy/ch-source.html y el 4.3 en https://www.debian.org/doc/manuals/maint-guide/dreq.es.html#changelog
 
 ### Formato
 
@@ -71,7 +73,7 @@ canaima-servicios (0.1.2) stable; urgency=medium
 
 ### Descripción
 
-Es un script con sintaxis de Makefile, debe tener permisos de ejecución. Contiene instrucciones especificas para generar los paquetes binarios a partir de las fuentes, utilizando un conjunto de ayudantes[8] que automatizan tareas repetitivas del proceso de empaquetamiento. Para mas detalles consulte el apartado 4.9 en https://www.debian.org/doc/debian-policy/ch-source.html
+Es un script con sintaxis de Makefile, debe tener permisos de ejecución. Contiene instrucciones especificas para generar los paquetes binarios a partir de las fuentes, utilizando un conjunto de [ayudantes][8] que automatizan tareas repetitivas del proceso de empaquetamiento. Para mas detalles consulte el apartado 4.9 en https://www.debian.org/doc/debian-policy/ch-source.html
 
 ### Ejemplo
 
@@ -144,18 +146,18 @@ src/archivo_binario usr/bin
 src/archivo_configuracion etc/
 ```
 
-[1] https://www.debian.org/doc/debian-policy/
+[1]:https://www.debian.org/doc/debian-policy/
 
-[2] https://www.debian.org/doc/devel-manuals.es.html#policy
+[2]:https://www.debian.org/doc/devel-manuals.es.html#policy
 
-[3] http://manpages.ubuntu.com/manpages/karmic/man8/dh_make.8.html
+[3]:http://manpages.ubuntu.com/manpages/karmic/man8/dh_make.8.html
 
-[4] http://manpages.ubuntu.com/manpages/precise/en/man1/dch.1.html
+[4]:http://manpages.ubuntu.com/manpages/precise/en/man1/dch.1.html
 
-[5] https://www.debian.org/doc/manuals/maint-guide/index.en.html
+[5]:https://www.debian.org/doc/manuals/maint-guide/index.en.html
 
-[6] https://www.debian.org/doc/debian-policy/ch-source.html
+[6]:https://www.debian.org/doc/debian-policy/ch-source.html
 
-[7] https://www.debian.org/doc/debian-policy/ch-binary.html
+[7]:https://www.debian.org/doc/debian-policy/ch-binary.html
 
-[8] http://manpages.ubuntu.com/manpages/hardy/es/man7/debhelper.7.html
+[8]:http://manpages.ubuntu.com/manpages/hardy/es/man7/debhelper.7.html
