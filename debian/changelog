@@ -1,5 +1,5 @@
-saludador-web (0.1) stable; urgency=medium
+<nombre-paquete> (<version-paquete>) stable; urgency=medium
 
-  * primer lanzamiento
+  * <descripcion-cambios>
 
- -- Francisco Guerrero <jsfrncscg@gmail.com>  Wed, 20 Jan 2016 11:22:37 -0430
+ -- <Nombre Mantenedor> <<correo-mantenedor>>  Wed, 20 Jan 2016 11:22:37 -0430

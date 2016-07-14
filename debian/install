@@ -1,2 +1,2 @@
-saludador.nginx.conf /etc/nginx/sites-available/
-saludador.uwsgi.ini /etc/uwsgi/apps-available/
+<src/archivo_binario> <destino>
+<src/archivo_configuracion> <destino>
