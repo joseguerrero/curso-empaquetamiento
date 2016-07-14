@@ -1,0 +1,30 @@
+#!/bin/bash -e
+
+case ${1} in
+
+    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        service nginx stop
+
+        mv /etc/nginx/sites-available/default.bk /etc/nginx/sites-available/default
+
+        service nginx start
+    ;;
+
+    purge)
+
+    ;;
+
+    abort-upgrade|abort-install)
+
+    ;;
+
+    *)
+        echo "postrm no reconoce el argumento '"${1}"'" >&2
+        exit 1
+    ;;
+
+esac
+
+#DEBHELPER#
+
+exit 0

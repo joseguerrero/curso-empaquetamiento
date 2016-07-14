@@ -1,4 +1,0 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-print "Esta es una aplicacion que imprime texto en un terminal"

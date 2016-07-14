@@ -1,0 +1,2 @@
+/etc/nginx/sites-available/saludador.nginx.conf /etc/nginx/sites-enabled/saludador.nginx.conf
+/etc/uwsgi/apps-available/saludador.uwsgi.ini /etc/uwsgi/apps-enabled/saludador.uwsgi.ini
